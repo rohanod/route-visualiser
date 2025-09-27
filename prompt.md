@@ -10,7 +10,7 @@ give an example actually. don't have coords for the stops; just for the start an
 
 The data that you want to use from the files i gave you should be compiled into one or two files using a script and they can be used to make the actual path and the imported json can only have the stops along the way.
 
-Create the example json first
+Help me Create the example json first
 
 I want javascript scripts and create the scripts in a scripts folder in the project folder(Use better-t-stack to create the app so we can have a bunch of useful things. Here is my starting command, modify it as you see fit but we don't need to save any routes, just visualise them `pnpm create better-t-stack@latest my-better-t-app --frontend next --backend next --runtime node --api trpc --auth none --payments none --database none --orm none --db-setup none --package-manager pnpm --git --web-deploy none --server-deploy none --install --addons pwa tauri turborepo --examples none`). start with the scripts section. Use a proper libary for converting the swiss coords. Don't create the full app, just these helper scripts. Make sure to test the scripts. Delete main project if you actually did create the main app
 
