@@ -15,3 +15,91 @@ Help me Create the example json first
 I want javascript scripts and create the scripts in a scripts folder in the project folder(Use better-t-stack to create the app so we can have a bunch of useful things. Here is my starting command, modify it as you see fit but we don't need to save any routes, just visualise them `pnpm create better-t-stack@latest my-better-t-app --frontend next --backend next --runtime node --api trpc --auth none --payments none --database none --orm none --db-setup none --package-manager pnpm --git --web-deploy none --server-deploy none --install --addons pwa tauri turborepo --examples none`). start with the scripts section. Use a proper libary for converting the swiss coords. Don't create the full app, just these helper scripts. Make sure to test the scripts. Delete main project if you actually did create the main app
 
 Use all the tools you have to help with the task
+
+The git repo is https://github.com/rohanod/route-visualiser. You can clone it to see the other data
+
+## UPDATES:
+I ran the better t stack command and here was the output:
+
+```
+(base) ➜  route-visualiser git:(main) ✗ pnpm create better-t-stack@latest visualiser-app --frontend next --backend next --runtime node --api trpc --auth none --payments none --database none --orm none --db-setup none --package-manager pnpm --git --web-deploy none --server-deploy none --install --addons pwa tauri turborepo --examples none
+Downloading @biomejs/wasm-nodejs@2.2.4: 5.75 MB/5.75 MB, done
+.../1998eca350f-185d5                    |  +76 ++++++++
+.../1998eca350f-185d5                    | Progress: resolved 76, reused 38, downloaded 38, added 76, done
+
+ ██████╗ ███████╗████████╗████████╗███████╗██████╗
+ ██╔══██╗██╔════╝╚══██╔══╝╚══██╔══╝██╔════╝██╔══██╗
+ ██████╔╝█████╗     ██║      ██║   █████╗  ██████╔╝
+ ██╔══██╗██╔══╝     ██║      ██║   ██╔══╝  ██╔══██╗
+ ██████╔╝███████╗   ██║      ██║   ███████╗██║  ██║
+ ╚═════╝ ╚══════╝   ╚═╝      ╚═╝   ╚══════╝╚═╝  ╚═╝
+
+ ████████╗    ███████╗████████╗ █████╗  ██████╗██╗  ██╗
+ ╚══██╔══╝    ██╔════╝╚══██╔══╝██╔══██╗██╔════╝██║ ██╔╝
+    ██║       ███████╗   ██║   ███████║██║     █████╔╝
+    ██║       ╚════██║   ██║   ██╔══██║██║     ██╔═██╗
+    ██║       ███████║   ██║   ██║  ██║╚██████╗██║  ██╗
+    ╚═╝       ╚══════╝   ╚═╝   ╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝
+ 
+┌  Creating a new Better-T-Stack project
+│
+●  Using these pre-selected options:
+│
+│  Frontend: next
+│  Backend: next
+│  Runtime: node
+│  API: trpc
+│  Database: none
+│  ORM: none
+│  Auth: none
+│  Payments: none
+│  Addons: pwa, tauri, turborepo
+│  Examples: none
+│  Git Init: Yes
+│  Package Manager: pnpm
+│  Install Dependencies: Yes
+│  Database Setup: none
+│  Web Deployment: none
+│  Server Deployment: none
+│
+│
+│
+◇  Tauri desktop app support configured successfully!
+│
+◆  Project template successfully scaffolded!
+│
+◇  Dependencies installed successfully
+
+ ╭─────────────────────────────────────────────────────────────────╮
+ │                                                                 │
+ │  Next steps                                                     │
+ │  1. cd visualiser-app                                           │
+ │  2. pnpm run dev                                                │
+ │  Your project will be available at:                             │
+ │  • Frontend: http://localhost:3001                              │
+ │  • Backend API: http://localhost:3000                           │
+ │                                                                 │
+ │  Desktop app with Tauri:                                        │
+ │  • Start desktop app: cd apps/web && pnpm run desktop:dev       │
+ │  • Build desktop app: cd apps/web && pnpm run desktop:build     │
+ │  NOTE: Tauri requires Rust and platform-specific dependencies.  │
+ │     See: https://v2.tauri.app/start/prerequisites/              │
+ │                                                                 │
+ │  Update all dependencies:                                       │
+ │  pnpm dlx taze -r                                               │
+ │                                                                 │
+ │  Like Better-T-Stack? Please consider giving us a star          │
+ │     on GitHub:                                                  │
+ │  https://github.com/AmanVarshney01/create-better-t-stack        │
+ │                                                                 │
+ ╰─────────────────────────────────────────────────────────────────╯
+
+│
+◆  You can reproduce this setup with the following command:
+│  pnpm create better-t-stack@latest visualiser-app --frontend next --backend next --runtime node --database none --orm none --api trpc --auth none --payments none --addons pwa tauri turborepo --examples none --db-setup none --web-deploy none --server-deploy none --git --package-manager pnpm --install
+│
+└  Project created successfully in 45.01 seconds!
+
+(base) ➜  route-visualiser git:(001-create-a-visualiser) ✗ 
+```
+I want you to first clone the repo to find the data and examples then put the scripts in there. When giving me the result, just zip up the git repo for me to download and don't try to push anything
