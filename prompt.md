@@ -12,7 +12,7 @@ The data that you want to use from the files i gave you should be compiled into 
 
 Help me Create the example json first
 
-I want javascript scripts and create the scripts in a scripts folder in the project folder(Use better-t-stack to create the app so we can have a bunch of useful things. Here is my starting command, modify it as you see fit but we don't need to save any routes, just visualise them `pnpm create better-t-stack@latest my-better-t-app --frontend next --backend next --runtime node --api trpc --auth none --payments none --database none --orm none --db-setup none --package-manager pnpm --git --web-deploy none --server-deploy none --install --addons pwa tauri turborepo --examples none`). start with the scripts section. Use a proper libary for converting the swiss coords. Don't create the full app, just these helper scripts. Make sure to test the scripts. Delete main project if you actually did create the main app
+I want javascript scripts and create the scripts in a scripts folder in the project folder(Use better-t-stack to create the app so we can have a bunch of useful things. Here is my starting command, modify it as you see fit but we don't need to save any routes, just visualise them `pnpm create better-t-stack@latest route-visualiser --frontend next --backend next --runtime node --api trpc --auth none --payments none --database none --orm none --db-setup none --package-manager pnpm --no-git --web-deploy none --server-deploy none --install --addons pwa ruler tauri turborepo --examples none`). start with the scripts section. Use a proper libary for converting the swiss coords. Don't create the full app, just these helper scripts. Make sure to test the scripts. Delete main project if you actually did create the main app
 
 Use all the tools you have to help with the task
 
@@ -22,10 +22,7 @@ The git repo is https://github.com/rohanod/route-visualiser. You can clone it to
 I ran the better t stack command and here was the output:
 
 ```
-(base) ➜  route-visualiser git:(main) ✗ pnpm create better-t-stack@latest visualiser-app --frontend next --backend next --runtime node --api trpc --auth none --payments none --database none --orm none --db-setup none --package-manager pnpm --git --web-deploy none --server-deploy none --install --addons pwa tauri turborepo --examples none
-Downloading @biomejs/wasm-nodejs@2.2.4: 5.75 MB/5.75 MB, done
-.../1998eca350f-185d5                    |  +76 ++++++++
-.../1998eca350f-185d5                    | Progress: resolved 76, reused 38, downloaded 38, added 76, done
+(base) ➜  route-visualiser git:(main) ✗ pnpm create better-t-stack@latest route-visualiser --frontend next --backend next --runtime node --api trpc --auth none --payments none --database none --orm none --db-setup none --package-manager pnpm --no-git --web-deploy none --server-deploy none --install --addons pwa ruler tauri turborepo --examples none
 
  ██████╗ ███████╗████████╗████████╗███████╗██████╗
  ██╔══██╗██╔════╝╚══██╔══╝╚══██╔══╝██╔════╝██╔══██╗
@@ -53,9 +50,9 @@ Downloading @biomejs/wasm-nodejs@2.2.4: 5.75 MB/5.75 MB, done
 │  ORM: none
 │  Auth: none
 │  Payments: none
-│  Addons: pwa, tauri, turborepo
+│  Addons: pwa, ruler, tauri, turborepo
 │  Examples: none
-│  Git Init: Yes
+│  Git Init: No
 │  Package Manager: pnpm
 │  Install Dependencies: Yes
 │  Database Setup: none
@@ -66,6 +63,13 @@ Downloading @biomejs/wasm-nodejs@2.2.4: 5.75 MB/5.75 MB, done
 │
 ◇  Tauri desktop app support configured successfully!
 │
+●  Setting up Ruler...
+│
+◇  Select AI assistants for Ruler
+│  16 items selected
+│
+◇  Applied rules with Ruler
+│
 ◆  Project template successfully scaffolded!
 │
 ◇  Dependencies installed successfully
@@ -73,7 +77,7 @@ Downloading @biomejs/wasm-nodejs@2.2.4: 5.75 MB/5.75 MB, done
  ╭─────────────────────────────────────────────────────────────────╮
  │                                                                 │
  │  Next steps                                                     │
- │  1. cd visualiser-app                                           │
+ │  1. cd route-visualiser                                         │
  │  2. pnpm run dev                                                │
  │  Your project will be available at:                             │
  │  • Frontend: http://localhost:3001                              │
@@ -96,10 +100,10 @@ Downloading @biomejs/wasm-nodejs@2.2.4: 5.75 MB/5.75 MB, done
 
 │
 ◆  You can reproduce this setup with the following command:
-│  pnpm create better-t-stack@latest visualiser-app --frontend next --backend next --runtime node --database none --orm none --api trpc --auth none --payments none --addons pwa tauri turborepo --examples none --db-setup none --web-deploy none --server-deploy none --git --package-manager pnpm --install
+│  pnpm create better-t-stack@latest route-visualiser --frontend next --backend next --runtime node --database none --orm none --api trpc --auth none --payments none --addons pwa ruler tauri turborepo --examples none --db-setup none --web-deploy none --server-deploy none --no-git --package-manager pnpm --install
 │
-└  Project created successfully in 45.01 seconds!
+└  Project created successfully in 18.30 seconds!
 
-(base) ➜  route-visualiser git:(001-create-a-visualiser) ✗ 
+(base) ➜  route-visualiser git:(main) ✗ 
 ```
 I want you to first clone the repo to find the data and examples then put the scripts in there. When giving me the result, just zip up the git repo for me to download and don't try to push anything
