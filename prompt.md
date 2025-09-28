@@ -107,3 +107,5 @@ I ran the better t stack command and here was the output:
 (base) ➜  route-visualiser git:(main) ✗ 
 ```
 I want you to first clone the repo to find the data and examples then put the scripts in there. When giving me the result, just zip up the git repo for me to download and don't try to push anything
+
+In existing-scripts/, there are some previously used scripts. You can reuse them to help make the new one
