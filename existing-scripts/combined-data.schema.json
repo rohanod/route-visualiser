@@ -1,0 +1,113 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "TPG Combined Route Data",
+  "description": "Combined data structure for TPG (Geneva Public Transport) stops, lines, routes, and geometries",
+  "type": "object",
+  "required": ["stops", "lines"],
+  "properties": {
+    "stops": {
+      "type": "object",
+      "description": "Dictionary of all transit stops, keyed by stop name",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["lat", "lon", "lines"],
+        "properties": {
+          "lat": {
+            "type": "number",
+            "description": "Latitude coordinate of the stop (WGS84)",
+            "minimum": -90,
+            "maximum": 90
+          },
+          "lon": {
+            "type": "number",
+            "description": "Longitude coordinate of the stop (WGS84)",
+            "minimum": -180,
+            "maximum": 180
+          },
+          "lines": {
+            "type": "object",
+            "description": "Lines that serve this stop, keyed by line number",
+            "additionalProperties": {
+              "type": "object",
+              "required": ["directions"],
+              "properties": {
+                "directions": {
+                  "type": "object",
+                  "description": "Directions this stop serves for this line, with the stop's position index in that direction's route",
+                  "additionalProperties": {
+                    "type": "integer",
+                    "description": "Zero-indexed position of this stop in the ordered route for this direction",
+                    "minimum": 0
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "lines": {
+      "type": "object",
+      "description": "Dictionary of all transit lines, keyed by line number",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["name", "type", "colour", "geometry", "directions"],
+        "properties": {
+          "name": {
+            "type": "string",
+            "description": "Display name of the line (e.g., 'Line 7')"
+          },
+          "type": {
+            "type": "string",
+            "description": "Type of transit service",
+            "examples": [
+              "Tram",
+              "Bus",
+              "Trolleybus",
+              "Lignes interurbaines transfrontalières et autres partenaires"
+            ]
+          },
+          "colour": {
+            "type": "string",
+            "description": "Hex color code for the line (e.g., '#5A1E82')",
+            "pattern": "^#[0-9A-Fa-f]{6}$"
+          },
+          "geometry": {
+            "type": "array",
+            "description": "Array of [latitude, longitude] coordinate pairs representing the route path on a map",
+            "items": {
+              "type": "array",
+              "description": "A single coordinate pair [lat, lon]",
+              "items": {
+                "type": "number"
+              },
+              "minItems": 2,
+              "maxItems": 2
+            }
+          },
+          "directions": {
+            "type": "object",
+            "description": "Route information for both directions of travel",
+            "required": ["aller", "retour"],
+            "properties": {
+              "aller": {
+                "type": "array",
+                "description": "Ordered list of stop names in the 'aller' (outbound) direction",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "retour": {
+                "type": "array",
+                "description": "Ordered list of stop names in the 'retour' (return/inbound) direction",
+                "items": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

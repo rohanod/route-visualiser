@@ -113,3 +113,8 @@ Priority:
 1. Create the scripts to combine the data
 2. Create the full app features with embeded data to make it look like the examples
 3. Create the json import
+
+We can have multiple scripts but in the end, import them into one final script. Allow walking in the route import
+
+Ignore the kmz file, we have a better file, carto-metro-couche-lignes.geojson.
+
